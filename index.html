@@ -332,8 +332,9 @@
   <ol class="steps">
     <li>
       <div>
-        <h3>Campo obrigatório com regra de bloqueio de cobrança dupla</h3>
-        <p>Radio “hóspede já pagou? sim / não” trava o submit até o franqueado responder. A base fica <strong>100% preenchida</strong> (não necessariamente 100% correta) e, quando marcado “sim”, a <strong>cobrança oficial da Seazone fica automaticamente bloqueada</strong> para aquele dano. Se surgir divergência posterior (hóspede contesta, comprovante inválido), o caso sobe para revisão do Atendimento antes de reabrir a cobrança.</p>
+        <h3>Campo obrigatório com escolha ativa e bloqueio de cobrança dupla</h3>
+        <p>Radio “hóspede já pagou? sim / não” deve abrir <strong>sem nenhuma opção pré-selecionada</strong> — o submit fica desabilitado até o franqueado clicar ativamente em uma das duas. A configuração atual (default “não”) precisa ser removida: com default, quem cobrou por fora nem toca no campo e o registro sai marcado como “não pagou”, criando viés de omissão no dado. A base fica <strong>100% preenchida por escolha ativa</strong> (não necessariamente 100% correta — a detecção cruzada do ajuste 3 cobre esse risco).</p>
+        <p>Quando marcado “sim”, a <strong>cobrança oficial da Seazone fica automaticamente bloqueada</strong> para aquele dano. Se surgir divergência posterior (hóspede contesta, comprovante inválido), o caso sobe para revisão do Atendimento antes de reabrir a cobrança.</p>
       </div>
     </li>
     <li>
