@@ -283,7 +283,7 @@
       <span data-logo="primary" data-width="130"></span>
       <span class="sub">BackOffice Franquias</span>
     </span>
-    <span class="meta">Memo interno · 25.08.26</span>
+    <span class="meta">Memo interno · rev. 27.08.26</span>
   </header>
 
   <h1 class="title">Danos já pagos:<br>qual mockup <span class="accent">seguir</span>.</h1>
@@ -332,20 +332,26 @@
   <ol class="steps">
     <li>
       <div>
-        <h3>Campo obrigatório, sem default</h3>
-        <p>Radio “hóspede já pagou? sim / não” trava o submit até o franqueado responder. Zero registro sem essa resposta — a base fica 100% classificada.</p>
+        <h3>Campo obrigatório com regra de bloqueio de cobrança dupla</h3>
+        <p>Radio “hóspede já pagou? sim / não” trava o submit até o franqueado responder. A base fica <strong>100% preenchida</strong> (não necessariamente 100% correta) e, quando marcado “sim”, a <strong>cobrança oficial da Seazone fica automaticamente bloqueada</strong> para aquele dano. Se surgir divergência posterior (hóspede contesta, comprovante inválido), o caso sobe para revisão do Atendimento antes de reabrir a cobrança.</p>
       </div>
     </li>
     <li>
       <div>
-        <h3>Comprovante anexo quando “sim”</h3>
-        <p>Foto do Pix, recibo ou print do cartão obrigatório. É o que dá dente pra Seazone auditar depois. Sem comprovante, não fecha o cadastro.</p>
+        <h3>Comprovante + valor recebido + data do recebimento (quando “sim”)</h3>
+        <p>Ao marcar “sim”, o franqueado precisa anexar comprovante (Pix, recibo, print do cartão) e preencher <strong>valor recebido</strong> e <strong>data do recebimento</strong> — obrigatórios. Isso separa declaração de dado auditável e resolve a diferença entre valor do dano e valor efetivamente pago (negociação ou pagamento parcial), garantindo comparabilidade real com o cobrado pela Seazone.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Detecção cruzada com o relato do hóspede</h3>
+        <p>Se o hóspede afirmar na pesquisa pós-estadia que pagou pelo dano e o registro do franqueado disser “não”, gera alerta na listagem central para auditoria. É o pedaço de governança da C preservado dentro do escopo da B — mitiga o incentivo de marcar “não” pra evitar o trabalho do comprovante e não depende de fase 2.</p>
       </div>
     </li>
     <li>
       <div>
         <h3>Filtro “já pago pela franquia” + KPI dedicado</h3>
-        <p>Filtro salvo na listagem central de danos garante visibilidade imediata para auditoria, enquanto o KPI dedicado — com volume e valor de danos cobrados diretamente pela franquia por período — transforma o dado em uma métrica acompanhável, permitindo ranking, comparação mês a mês e cruzamento com os valores cobrados pela Seazone.</p>
+        <p>Filtro salvo na listagem central de danos garante visibilidade imediata para auditoria, enquanto o KPI dedicado — com volume e <strong>valor recebido</strong> de danos cobrados diretamente pela franquia por período — transforma o dado em uma métrica acompanhável, permitindo ranking, comparação mês a mês e cruzamento com os valores cobrados pela Seazone.</p>
       </div>
     </li>
   </ol>
